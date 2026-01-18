@@ -1,6 +1,6 @@
-kanta = float(input("Give a rectangle's basement: "))
-height = float(input("Give a rectangle's height: "))
-piiri = kanta * 2 + height * 2 
-pinta = kanta * height
-print(f"rectangle's perimeter: {piiri}")
-print(f"rectangle's area: {pinta}")
+kanta = float(input("Anna suorakulmion kanta: "))
+korkeus = float(input("Anna suorakulmion korkeus: "))
+piiri = kanta * 2 + korkeus * 2
+pinta_ala = kanta * korkeus
+print(f"Suorakulmion piiri: {piiri}")
+print(f"Suorakulmion pinta-ala: {pinta_ala}")
