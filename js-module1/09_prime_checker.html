@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>09 Prime Number Checker</title>
+</head>
+<body>
+  <script>
+    const num = Number(prompt('Enter an integer:'));
+
+    let isPrime = num > 1;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+
+    const result = isPrime
+      ? num + ' is a prime number.'
+      : num + ' is not a prime number.';
+
+    document.write('<h1>' + result + '</h1>');
+  </script>
+</body>
+</html>

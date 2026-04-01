@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>08 Leap Years in Range</title>
+</head>
+<body>
+  <script>
+    const start = Number(prompt('Enter the start year:'));
+    const end   = Number(prompt('Enter the end year:'));
+
+    let html = '<h1>Leap years from ' + start + ' to ' + end + '</h1><ul>';
+
+    for (let year = start; year <= end; year++) {
+      const isLeap = (year % 400 === 0) || (year % 100 !== 0 && year % 4 === 0);
+      if (isLeap) {
+        html += '<li>' + year + '</li>';
+      }
+    }
+
+    html += '</ul>';
+    document.write(html);
+  </script>
+</body>
+</html>

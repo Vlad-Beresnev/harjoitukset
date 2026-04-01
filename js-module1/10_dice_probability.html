@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10 Dice Probability Calculator</title>
+</head>
+<body>
+  <script>
+    const diceCount   = Number(prompt('How many dice?'));
+    const targetSum   = Number(prompt('What sum are you interested in?'));
+    const simulations = 10000;
+    let hits = 0;
+
+    for (let i = 0; i < simulations; i++) {
+      let rollSum = 0;
+      for (let d = 0; d < diceCount; d++) {
+        rollSum += Math.floor(Math.random() * 6) + 1;
+      }
+      if (rollSum === targetSum) hits++;
+    }
+
+    const probability = (hits / simulations * 100).toFixed(2);
+    document.write('<h1>Probability to get sum ' + targetSum + ' with ' + diceCount + ' dice is ' + probability + '%</h1>');
+  </script>
+</body>
+</html>

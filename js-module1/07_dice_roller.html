@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>07 Dice Roller</title>
+</head>
+<body>
+  <script>
+    const count = Number(prompt('How many dice do you want to roll?'));
+    let total = 0;
+
+    for (let i = 0; i < count; i++) {
+      total += Math.floor(Math.random() * 6) + 1;
+    }
+
+    document.write('<h1>You rolled ' + count + ' dice.</h1>');
+    document.write('<p>Total: ' + total + '</p>');
+  </script>
+</body>
+</html>
